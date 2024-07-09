@@ -16,7 +16,7 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Set up Docker Buildx
@@ -27,7 +27,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/webpage:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/webpage:latest
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

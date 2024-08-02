@@ -28,26 +28,25 @@
             <?php
                 // Array de juegos
                 $juegos = [
-                    ["nombre" => "Juego 1", "descripcion" => "Descripción del juego 1."],
-                    ["nombre" => "Juego 2", "descripcion" => "Descripción del juego 2."],
+                    ["nombre" => "Saga Call Of Duty", "descripcion" => "La saga de Call of Duty (CoD) es una serie de videojuegos d>
+                    ["nombre" => "Saga Fallout", "descripcion" => "Fallout es una serie de videojuegos de rol y acción postapocalíp>
                     // Agrega más juegos aquí
                 ];
 
                 // Mostrar juegos
                 foreach ($juegos as $juego) {
-                    echo "<div class='juego'>";
-                    echo "<h3>" . $juego['nombre'] . "</h3>";
-                    echo "<p>" . $juego['descripcion'] . "</p>";
-                    echo "</div>";
+                    echo '<div class="juego">';
+                    echo '<h3>' . $juego["nombre"] . '</h3>';
+                    echo '<img src="' . $juego["imagen"] . '" alt="Imagen de ' . $juego["nombre"] . '">';
+                    echo '<p>' . $juego["descripcion"] . '</p>';
+                    echo '</div>';
                 }
             ?>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Mi Página de Videojuegos. Todos los derechos reservados.</p>
+        <p>© 2024 Mi Página de Videojuegos. Todos los derechos reservados.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
